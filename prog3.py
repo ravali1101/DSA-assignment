@@ -1,11 +1,11 @@
 
-class ArrayStack:
 	""" LIFO stack implementation usinng Python list as underlying storage """
 
 	def __init__ (self,size = 1):
 		""" Creat an empty stack """
 		self._data = []
 		self._top = -1
+		#limiting stack to a fixed size
 		self._size = size
 
 	def len (self):
@@ -25,7 +25,6 @@ class ArrayStack:
 
 	def top (self):
 		""" Return (but do not remove) the element at the top of the stack 
-
 		"""
 		if self.is_empty():
 			print('Stack is empty')

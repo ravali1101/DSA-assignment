@@ -3,8 +3,8 @@ class Stack:
 	    self._data = []
 	    self._size = 0
 
-	def push(self,x):
-		self._data.append(x)
+	def push(self,e):
+		self._data.append(e)
 		self._size += 1
 
 	def pop(self):
@@ -20,9 +20,10 @@ class Stack:
 	def display(self):
 		print(self._data)
 
-def operations():
+
+def tests():
 	R = Stack()
-	S = Stack()
+	st = Stack()
 	T = Stack()
 
 	R.push(1)
@@ -40,13 +41,13 @@ def operations():
 	T.push(9)
 	T.display()
 
-	while S.is_empty() == 0:
-		(R.push(S.pop()))
-		count += 1
+	while st.is_empty() == 0:
+		(R.push(st.pop()))
+		c += 1
 	while T.is_empty() == 0:
 		(R.push(T.pop()))
-		count += 1
+		c += 1
 	R.display()
 
 if __name__ == '__main__':
-	operations()
+	tests()

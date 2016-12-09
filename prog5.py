@@ -2,15 +2,16 @@ class stack:
 	def __init__(self):
 		self._data = []
 
-	def push(self,ele):
-		self._data.append(ele)
+	def push(self,e):
+		self._data.append(e)
 
 	def pop(self):
 		return self._data.pop()
 
 	def is_empty (self):
-		""" Return True if the stack is empty """
+		
 		return len(self._data) == 0
+
 
 def test_match_html (raw):
 	S = stack()
@@ -38,4 +39,4 @@ def test_match_html (raw):
 	return S.is_empty()
 
 if __name__ == '__main__' :
-	print (test_match_html('<html> <body> <center> <h1> The little Boat </h1> </center> </body> </html>'))
+	print (test_match_html('<html> <body> <center> <h1> The DSA Assignment </h1> </center> </body> </html>'))

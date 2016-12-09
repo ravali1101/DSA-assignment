@@ -1,35 +1,35 @@
+
 class Stack:
-""" implementation of stack"""
-""" create an empty stack"""
 	def __init__(self):		
 	    self._data = []
-""" insert element into stack"""
-	def push(self,x):
-		self._data.append(x)
-""" delete element from stack"""
+
+	def push(self,e):
+		self._data.append(e)
+
 	def pop(self):
 		if(self.is_empty()):
 			print("stack is empty")
 		else:
 		    return self._data.pop()
-""" check if stack is empty"""
+
 	def is_empty(self):
 		return len(self._data) == 0
-""" reverse elements of stack"""
-	def reverse_elements(self):
-	    temp1 = Stack()
-	    temp2 = Stack()
+
+
+	def reverse(self):
+	    s = Stack()
+	    t = Stack()
 	    
 	    length = len(self._data)
 
-	    for x in range(length):
-	    	temp1.push(self.pop())
+	    for e in range(length):
+	    	s.push(self.pop())
 	    
-	    for x in range(length):
-	    	temp2.push(temp1.pop())
+	    for e in range(length):
+	    	t.push(s.pop())
 	    	
-	    for x in range(length):
-	    	self._data.append(temp2.pop())
+	    for e in range(length):
+	    	self._data.append(t.pop())
 
 	    print(self._data)
 	    
@@ -37,7 +37,6 @@ class Stack:
 
 if __name__ == '__main__':
 	s1 = Stack()
-	s1.push(5)
 	s1.push(10)
-	s1.reverse_elements()
-		
+	s1.push(20)
+	s1.reverse()
