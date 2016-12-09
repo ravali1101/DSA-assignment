@@ -1,5 +1,5 @@
-
-	""" LIFO stack implementation usinng Python list as underlying storage """
+""" LIFO stack implementation usinng Python list as underlying storage """
+class ArrayStack:
 
 	def __init__ (self,size = 1):
 		""" Creat an empty stack """
